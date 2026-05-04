@@ -4,13 +4,13 @@ import lombok.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "usuarios")
+@Table(name = "comentarios")
 @Getter @Setter @AllArgsConstructor @NoArgsConstructor
-public class Usuario {
+public class Comentario {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String username;
-    private String email;
-    private String institucion;
-    private LocalDateTime fechaRegistro = LocalDateTime.now();
+    private String texto;
+    private LocalDateTime fechaComentario = LocalDateTime.now();
+    private Long confesionId;
+    private Long autorId;
 }
